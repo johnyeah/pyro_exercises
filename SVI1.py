@@ -40,6 +40,7 @@ def model(data):
         pyro.sample('obs_{}'.format(i), dist.Bernoulli(f), obs=data[i])
 
 
+
 def guide(data):
     # 在Pyro中注册变分分布的参数
     # 两个参数值均为15.0

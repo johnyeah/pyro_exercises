@@ -44,7 +44,7 @@ if __name__ == "__main__":
     num_steps = 2500
     for t in range(num_steps):
         losses.append(svi.step(guess))
-        a.append(pyro.param("a").item())
+        a.append(pyro.param("a").item())  # to show the value of a, using pyro.param("a").item()
         b.append(pyro.param("b").item())
 
     plt.figure(1)
